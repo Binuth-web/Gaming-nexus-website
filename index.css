@@ -1,0 +1,428 @@
+/* Navbar Base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+/* Logo container fix */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Cart Icon - Better Placement Across Screens */
+.cart-icon {
+  position: relative;
+  margin-left: auto;
+  margin-right: 10px;
+  order: 3; /* Ensure it appears on the far right */
+}
+
+.cart-icon a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+#cart-icon-img {
+  width: 30px;
+  height: auto;
+}
+
+#cart-count {
+  background-color: #f72585;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+/* Hide Checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #f72585;
+  order: 2;
+}
+
+/* Menu List */
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  order: 1;
+}
+
+/* Menu Items */
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #f72585;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    background-color: #2e2b5f;
+    width: 100%;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 20px;
+  }
+
+  .cart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 0;
+    order: 4;
+  }
+}
+
+  /* General Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a23;
+  color: #f1f1f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Main image section */
+.main-image-section {
+  position: relative;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  opacity: 0.85;
+  border-bottom: 4px solid #f72585;
+}
+
+
+
+/* Section Headings */
+section h2 {
+  text-align: center;
+  color: #00ffff;
+  margin: 3rem 0 1.5rem;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #00ffff;
+  margin: 0.5rem auto;
+  border-radius: 20px;
+}
+
+/* Description */
+.description {
+  padding: 2rem;
+  text-align: center;
+  background-color: #282c4d;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* New Game Arrivals */
+.new-game-arrivals {
+  background-color: #1f223e;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.arrival-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.arrival-content img:hover {
+  transform: scale(1.03);
+}
+
+.arrival-content p {
+  color: #cccccc;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Top Selling Games Section */
+.top-selling-games {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #1a1a2e;
+}
+
+.top-selling-games h2 {
+  font-size: 2.5rem;
+  color: #f72585;
+}
+
+.game-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+.game-gallery img {
+  width: 140px;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.game-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.top-selling-games p {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  font-size: 1.1rem;
+  color: #cfcfcf;
+}
+
+/* Gaming News and Updates Section */
+.gaming-news-updates {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #121229;
+}
+
+.gaming-news-updates h2 {
+  color: #00b4d8;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.news-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.news-item {
+  width: 30%;
+  min-width: 260px;
+  background-color: #232323;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  color: #eee;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-8px);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.news-item ul {
+  padding-left: 1.2rem;
+  color: #ccc;
+}
+
+.news-item li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.news-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.8rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .game-gallery img,
+  .news-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .caption h1 {
+    font-size: 2rem;
+  }
+
+  .game-gallery img,
+  .news-item {
+    width: 100%;
+  }
+
+  .caption p {
+    font-size: 1rem;
+  }
+}
+
+  
+  
+   /* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #5b5859;
+    color: black;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-section {
+    width: 30%;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color:  #f72585;
+  }
+  
+  .social-links .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .social-links .circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 50%;
+    overflow: hidden; 
+    transition: transform 0.3s;
+  }
+  
+  .circle img {
+    width: 100%;
+    height: 100%px;
+    object-fit: cover;
+  }
+  
+  .circle:hover {
+    transform: scale(1.1); 
+  }
+  
+  
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .quick-links ul li {
+    margin-bottom: 5px;
+  }
+  
+  .quick-links ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 0.9rem;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .social-links .social-icons {
+      justify-content: center;
+    }
+  }
+  

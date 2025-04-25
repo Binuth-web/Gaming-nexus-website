@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Checkout</title>
+  <link rel="stylesheet" href="form.css" />
+  <script src="form.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Checkout</h1>
+
+    <form id="checkout-form">
+      <!-- Personal Info -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+      </fieldset>
+
+      <!-- Delivery Info -->
+      <fieldset>
+        <legend>Delivery Details</legend>
+        <label for="address">Address</label>
+        <textarea id="address" required></textarea>
+
+        <label for="city">City</label>
+        <input type="text" id="city" required />
+
+        <label for="postal">Postal Code</label>
+        <input type="text" id="postal" required />
+
+        <!-- Dropdown: Delivery Method -->
+        <label for="delivery-method">Delivery Method</label>
+        <select id="delivery-method" required>
+          <option value="">-- Select Delivery Method --</option>
+          <option value="standard">Standard (3-5 days)</option>
+          <option value="express">Express (1-2 days)</option>
+          <option value="pickup">In-store Pickup</option>
+        </select>
+      </fieldset>
+
+      <!-- Payment Info -->
+      <fieldset>
+        <legend>Payment Information</legend>
+
+        <!-- Radio: Payment Method -->
+        <p>Choose Payment Method:</p>
+        <label><input type="radio" name="payment-method" value="credit" required /> Credit Card</label><br>
+        <label><input type="radio" name="payment-method" value="paypal" /> PayPal</label><br>
+        <label><input type="radio" name="payment-method" value="crypto" /> Crypto</label>
+
+        <label for="card">Card Number</label>
+        <input type="text" id="card" required />
+
+        <label for="expiry">Expiry Date</label>
+        <input type="month" id="expiry" required />
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" required />
+      </fieldset>
+
+      <!-- Checkboxes: Additional Services -->
+      <fieldset>
+        <legend>Additional Services</legend>
+        <label><input type="checkbox" name="services" value="gift-wrap" /> Gift Wrapping</label><br>
+        <label><input type="checkbox" name="services" value="extended-warranty" /> Extended Warranty</label><br>
+        <label><input type="checkbox" name="services" value="insurance" /> Shipping Insurance</label>
+      </fieldset>
+
+      <button type="submit" id="pay-btn">Pay</button>
+    </form>
+
+    <div id="message" class="hidden"></div>
+  </div>
+
+</body>
+</html>

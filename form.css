@@ -1,0 +1,285 @@
+/* Navbar Base */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a2e;
+    padding: 15px 20px;
+    color: white;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo container fix */
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Cart Icon - Better Placement Across Screens */
+  .cart-icon {
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    order: 3; /* Ensure it appears on the far right */
+  }
+  
+  .cart-icon a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  #cart-icon-img {
+    width: 30px;
+    height: auto;
+  }
+  
+  #cart-count {
+    background-color: #f72585;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+  }
+  
+  /* Hide Checkbox */
+  #menu-toggle {
+    display: none;
+  }
+  
+  /* Hamburger Icon */
+  .menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #f72585;
+    order: 2;
+  }
+  
+  /* Menu List */
+  .menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    order: 1;
+  }
+  
+  /* Menu Items */
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .menu li a:hover {
+    color: #f72585;
+  }
+  
+  /* ---------------- Responsive ---------------- */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-icon {
+      display: block;
+      margin-left: auto;
+    }
+  
+    .menu {
+      flex-direction: column;
+      background-color: #2e2b5f;
+      width: 100%;
+      display: none;
+      padding: 20px 0;
+    }
+  
+    #menu-toggle:checked + .menu-icon + .menu {
+      display: flex;
+    }
+  
+    .menu li {
+      margin: 10px 20px;
+    }
+  
+    .cart-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      margin: 0;
+      order: 4;
+    }
+  }
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+  }
+
+  /* Reset and base styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #f0f2f5, #d9e2ec);
+    padding: 40px;
+    color: #333;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+  }
+  
+  /* Form fieldsets */
+  fieldset {
+    border: 2px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1e40af;
+    padding: 0 10px;
+  }
+  
+  /* Labels and Inputs */
+  label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #1f2937;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="month"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #6366f1;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Textarea */
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Radio & Checkboxes */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #4f46e5;
+  }
+  
+  /* Button */
+  button#pay-btn {
+    margin-top: 20px;
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+  }
+  
+  button#pay-btn:hover {
+    background-color: #4338ca;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #message {
+    background-color: #e6ffe6;
+    border: 2px solid #33cc33;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    color: #006600;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+  
+    fieldset {
+      padding: 15px;
+    }
+  }
+
+
+  
+
+  
+  
+  

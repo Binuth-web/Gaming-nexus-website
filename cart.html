@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer’s Nexus</title>
+    <link rel="icon" type="image/png" href="icons/WebSite Logo-192x192.png">
+   <link rel="stylesheet" href="cart.css">
+   
+   <script src="cart.js"></script>
+   <script src="main.js"></script>
+</head>
+<body>
+ <!-- Navigation Bar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="images/Web site logo.jpg" alt="website logo" class="logo-img" />
+  </div>
+
+  <!-- Hidden Checkbox Toggle -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Hamburger Icon -->
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+  <!-- Menu List -->
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about us.html">About us</a></li>
+    <li><a href="Upcoming games .html">Upcoming Games</a></li>
+    <li><a href="Gaming Consoles and  peripherals .html">Gaming essentials</a></li>
+    <li><a href="Games.html">Games</a></li>
+    <li><a href="Categories.html">Categories</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+    <li><a href="parts.html">Parts</a></li>
+    <li><a href="cart.html">cart</a></li>
+  </ul>
+
+  <!-- Cart Icon -->
+  <div class="cart-icon">
+    <a href="cart.html">
+      <img src="images/cart.png" alt="Cart" id="cart-icon-img" />
+      <span id="cart-count">0</span>
+    </a>
+  </div>
+</div>
+
+<main>
+  <header>
+    <h1>Your Shopping Cart</h1>
+  </header>
+
+  <section class="cart-section">
+    <h2>Your Cart</h2>
+    <div class="table-container">
+      <table id="cart-table">
+        <!-- table content -->
+     
+    
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+
+    </table>
+  </div>
+   
+    <p>Total: $<span id="total">0.00</span></p>
+    <div class="cart-buttons">
+      <button id="clear-cart">Clear Cart</button>
+      <button id="save-fav">Save Favorite</button>
+      <button id="load-fav">Load Favorite</button>
+      <a href="form.html"><button>Buy Now</button></a>
+    </div>
+  </section>
+  
+  
+
+</main>
+</body>
+</html>
